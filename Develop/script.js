@@ -1,10 +1,5 @@
 // Assignment code here
 
-var passLength = window.prompt("How many characters in your password? Pick from 1 to 20.");
-var passCase = window.prompt("Do you want your password to be case sensitive? y/n");
-var passNum = window.prompt("Do you want your password to include numbers? y/n");
-var passSpec = window.prompt("Do you want your password to be include special characters? y/n");
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -20,8 +15,12 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-  var passLength = window.prompt("How many characters in your password? Pick from 1 to 20.");
-  var passCase = window.prompt("Do you want your password to be case sensitive? y/n");
-  var passNum = window.prompt("Do you want your password to include numbers? y/n");
-  var passSpec = window.prompt("Do you want your password to be include special characters? y/n");
+  var passLength = parseInt(window.prompt("How many characters in your password? Pick from 1 to 20."));
+  if (passLength < 20 || passLength > 1) {
+    return null;
+  }
+  var upperCase = window.confirm('Do you want your password to include uppercase characters? Click "ok" if yes.');
+  var lowerCase = window.confirm('Do you want your password to include lower case characters? Click "ok" if yes.');
+  var passNum = window.confirm('Do you want your password to include numbers? Click "ok" if yes.');
+  var passSpec = window.confirm('Do you want your password to be include special characters? Click "ok" if yes.');
 };
