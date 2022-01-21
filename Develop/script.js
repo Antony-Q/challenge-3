@@ -1,10 +1,13 @@
 // Assignment code here
 
+var passLength = window.prompt("How many characters in your password? Pick from 1 to 20.");
+var passCase = window.prompt("Do you want your password to be case sensitive? y/n");
+var passNum = window.prompt("Do you want your password to include numbers? y/n");
+var passSpec = window.prompt("Do you want your password to be include special characters? y/n");
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-// Variable for "would you like your password to be"
-var askPass = "Would you like your password to be: ");
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -16,17 +19,9 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-function writePassword() {
-  var promptCriteria = window.prompt('Which creteria would you like to use? Respond either "y" or "n" to make your decision. Continue? y/n');
-  alert (promptCriteria)
-    while (promptCriteria = y) {
-      window.alert("How many characters in your password?");
-      if (promptCriteria = y) {
-        window.alert("How many characters in your password?");
-      break;
-    } else {
-      window.alert(playerName + ' still has ' + playerHealth + ' health left.');
-
-
-    )
+function generatePassword() {
+  var passLength = window.prompt("How many characters in your password? Pick from 1 to 20.");
+  var passCase = window.prompt("Do you want your password to be case sensitive? y/n");
+  var passNum = window.prompt("Do you want your password to include numbers? y/n");
+  var passSpec = window.prompt("Do you want your password to be include special characters? y/n");
 };
