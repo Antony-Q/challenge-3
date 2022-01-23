@@ -1,8 +1,9 @@
 // Assignment code here
-var upperCase = ["A", "B", "C"]
-var lowerCase = ["a", "b", "c"]
-var number = ["1", "2", "3"]
-var specChar = ["!", "@", "#"]
+var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+var specChar = ["!", "@", "#", "$", "%", "^", "&", "*"]
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -18,8 +19,8 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-  var passLength = parseInt(window.prompt("How many characters in your password? Pick from 1 to 20."));
-  if (passLength > 20 || passLength < 1) {
+  var passLength = parseInt(window.prompt("How many characters in your password? Pick from 8 to 128."));
+  if (passLength > 128 || passLength < 8) {
     return null;
   }
 
@@ -34,35 +35,22 @@ function generatePassword() {
   if (passUpper) {
     possibleChar = possibleChar.concat(upperCase);
   }
-  if (passUpper) {
+  if (passLower) {
     possibleChar = possibleChar.concat(lowerCase);
   }
-  if (passUpper) {
+  if (passNum) {
     possibleChar = possibleChar.concat(number);
   }
-  if (passUpper) {
+  if (passSpec) {
     possibleChar = possibleChar.concat(specChar);
   }
+
+
   for (var i = 0; i < passLength; i++) {
-    var randomLetter = possibleChar[Math.floor(Math.
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      random() * (possibleChar.length))]
+    var randomLetter = possibleChar[Math.floor(Math.random() * (possibleChar.length))]
     generatedPass.push(randomLetter);
   }
-  return generatedPass;
+
+
+  return generatedPass.join("");
 };

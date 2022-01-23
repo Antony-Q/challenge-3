@@ -15,9 +15,3 @@ WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
-
-When I clikc the button, it will prompt to ask:
-    what length do i want the password to be?
-    case sensitive?
-    include numbers?
-    special characters?
