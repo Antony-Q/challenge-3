@@ -8,9 +8,9 @@ This is a web app, written in javascript, that will prompt the user for specific
 
 ## Website
 
-Use [this](https://github.com/Antony-Q/challenge-3.git) link to visit the hosted site.
+Use [this](https://antony-q.github.io/challenge-3/) link to visit the hosted site.
 
-URL: https://github.com/Antony-Q/challenge-3.git
+URL: https://antony-q.github.io/challenge-3/
 
 ## Requested Tasks
 
