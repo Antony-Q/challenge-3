@@ -18,16 +18,19 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Prompt for length of password
 function generatePassword() {
   var passLength = parseInt(window.prompt("How many characters in your password? Pick from 8 to 128."));
   if (passLength > 128 || passLength < 8) {
     return null;
   }
 
+// Password criteria prompts
   var passUpper = window.confirm('Do you want your password to include uppercase characters? Click "ok" if yes.');
   var passLower = window.confirm('Do you want your password to include lower case characters? Click "ok" if yes.');
   var passNum = window.confirm('Do you want your password to include numbers? Click "ok" if yes.');
   var passSpec = window.confirm('Do you want your password to be include special characters? Click "ok" if yes.');
+  
   var possibleChar = [];
 
   var generatedPass = [];
